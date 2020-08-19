@@ -1,0 +1,12 @@
+  
+    <ul>
+      
+      <% @settings.each do |setting| %>
+        <li>
+        <%=setting.name%>
+        <%=link_to 'deploy to web',setting_url(setting)%>
+        </li>
+
+
+      <% end %>
+    </ul>

@@ -1,0 +1,6 @@
+<%= form_for @setting do |f|%>
+    <%= f.label :name%>
+    <%=f.text_field :name%>
+    <%=f.submit%>
+<%end%>
+<%=link_to 'Show Notification',settings_url%>
