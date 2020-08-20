@@ -6,12 +6,12 @@ class SettingsController < ApplicationController
         @setting = Setting.new
 
     end
+    
     def create 
         @setting = Setting.create(params_new)
         redirect_to settings_path
-        
-
     end
+
     def index
         @settings = Setting.first
         return render json: { random_param_name: "Random event created successfully!",data: @settings}
@@ -21,7 +21,9 @@ class SettingsController < ApplicationController
     
     end
     def show 
-        @setting = Setting.find(params[:id])
+        # @setting = Setting.find(params[:id])
+        return render json: { random_param_name: "nested event created successfully!"}
+
     end
 
 

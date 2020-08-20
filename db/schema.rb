@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_052248) do
+ActiveRecord::Schema.define(version: 2020_08_19_084534) do
 
   create_table "settings", force: :cascade do |t|
     t.string "name"
+    t.integer "shop_id"
   end
 
   create_table "shops", force: :cascade do |t|
@@ -24,4 +25,5 @@ ActiveRecord::Schema.define(version: 2020_08_19_052248) do
     t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
   end
 
+  add_foreign_key "settings", "shops"
 end
